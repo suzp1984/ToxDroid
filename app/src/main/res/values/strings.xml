@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ToxDroid</string>
+    <string name="login_login">Login</string>
+    <string name="login_create_account_text">Create Tox Profile</string>
 </resources>
