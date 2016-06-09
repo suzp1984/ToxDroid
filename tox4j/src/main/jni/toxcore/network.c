@@ -437,7 +437,7 @@ void networking_poll(Networking_Core *net)
 
 #ifndef VANILLA_NACL
 /* Used for sodium_init() */
-#include <sodium.h>
+#include "sodium.h"
 #endif
 
 uint8_t at_startup_ran = 0;

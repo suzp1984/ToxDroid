@@ -11,9 +11,13 @@ android {
         versionName "1.0"
         ndk {
             moduleName "tox4j"
-            ldLibs "log"
+            ldLibs "log", "m"
+            //ldLibs.addAll(["log", "m"])
+            cFlags = "-I" + file("src/main/jni/libsodium/include/sodium/").absolutePath +
+                    " -I" + file("src/main/jni/libsodium/include/").absolutePath
         }
     }
+
     buildTypes {
         release {
             minifyEnabled false
