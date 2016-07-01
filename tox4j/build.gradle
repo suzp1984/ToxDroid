@@ -12,18 +12,8 @@ android {
         ndk {
             moduleName "tox4j"
             ldLibs "log", "m"
-            //ldLibs.addAll(["log", "m"])
-            cFlags = "-I" + file("src/main/jni/libsodium/include/sodium/").absolutePath +
-                    " -I" + file("src/main/jni/libsodium/include/").absolutePath +
-                    " -I" + file("src/main/jni/opus-1.1.2/include").absolutePath +
-                    " -I" + file("src/main/jni/opus-1.1.2/celt").absolutePath +
-                    " -I" + file("src/main/jni/opus-1.1.2/silk").absolutePath +
-                    " -I" + file("src/main/jni/opus-1.1.2/silk/fixed").absolutePath +
-                    " -I" + file("src/main/jni/libvpx/").absolutePath +
-                    " -DNULL=0 -DSOCKLEN_T=socklen_t -DLOCALE_NOT_USED -D_LARGEFILE_SOURCE=1 -D_FILE_OFFSET_BITS=64" +
-                    " -Drestrict='' -D__EMX__ -DOPUS_BUILD -DFIXED_POINT=1 -DDISABLE_FLOAT_API -DUSE_ALLOCA -DHAVE_LRINT -DHAVE_LRINTF  -DAVOID_TABLES" +
-                    " -w -std=gnu99 -O3 -fno-strict-aliasing -fprefetch-loop-arrays  -fno-math-errno" +
-                    " -DBSD=1 -ffast-math -O3 -funroll-loops"
+            // ldLibs.addAll(["log", "m"])
+            // cFlags = " -DBSD=1 -ffast-math -O3 -funroll-loops"
 
         }
     }
